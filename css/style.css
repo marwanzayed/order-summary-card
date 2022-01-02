@@ -1,0 +1,159 @@
+/* Start Global Rules */
+:root {
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+  --Pale-blue: hsl(225, 100%, 94%);
+  --Bright-blue: hsl(245, 75%, 52%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Red Hat Display", sans-serif;
+  background: url(../images/pattern-background-desktop.svg) no-repeat
+    var(--Pale-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.show-xl {
+  display: none;
+}
+@media (max-width: 767px) {
+  .show-xl {
+    display: block;
+  }
+  .hide-xl {
+    display: none;
+  }
+}
+/* End Global Rules */
+/* Start Card */
+.card {
+  background-color: #fff;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  text-align: center;
+  width: 85%;
+  max-width: 520px;
+}
+.card .img-header {
+  height: auto;
+}
+.card .img-header img {
+  width: 100%;
+}
+.card .main-content {
+  margin-top: 20px;
+}
+.card .main-content h2 {
+  font-size: 24px;
+  color: var(--dark-blue);
+  font-weight: 900;
+}
+.card .main-content p {
+  font-size: 16px;
+  color: var(--desaturated-blue);
+  font-weight: 500;
+  line-height: 1.7;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.card .main-content .plan {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.card .main-content .plan span:nth-child(1) {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.card .main-content .plan .text {
+  margin-left: 10px;
+}
+.card .main-content .plan .text h3 {
+  color: var(--dark-blue);
+  font-size: 16px;
+  margin-bottom: 3px;
+}
+.card .main-content .plan .text h4 {
+  color: var(--desaturated-blue);
+  font-size: 14px;
+}
+.card .main-content .plan a {
+  transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  text-decoration: none;
+  overflow: hidden;
+  position: relative;
+  color: var(--Bright-blue);
+}
+.card .main-content .plan a::after {
+  content: "";
+  border: 1px solid var(--Bright-blue);
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  left: 0;
+  transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+}
+.card .main-content .plan a:hover {
+  opacity: 0.8;
+}
+.card .main-content .plan a:hover::after {
+  opacity: 0;
+}
+.card .button {
+  margin-top: 20px;
+}
+.card .button button {
+  display: block;
+  width: 80%;
+  margin: 15px auto;
+  height: 40px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  cursor: pointer;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  font-size: 16px;
+  transition: all 0.3s linear;
+}
+.card .button button:nth-child(1) {
+  background: var(--Bright-blue);
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0px 20px 30px rgb(0 0 0 / 20%);
+}
+.card .button button:nth-child(1):hover {
+  opacity: 0.8;
+}
+.card .button button:nth-child(2):hover {
+  color: var(--desaturated-blue);
+}
+@media (max-width: 767px) {
+  body {
+    background: url(../images/pattern-background-mobile.svg) no-repeat
+      var(--Pale-blue);
+  }
+  .card .main-content p {
+    font-size: 14px;
+  }
+}
+/* End Card */
