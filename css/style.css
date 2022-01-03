@@ -39,7 +39,7 @@ body {
   overflow: hidden;
   text-align: center;
   width: 85%;
-  max-width: 520px;
+  max-width: 450px;
 }
 .card .img-header {
   height: auto;
@@ -50,7 +50,7 @@ body {
 .card .main-content {
   margin-top: 20px;
 }
-.card .main-content h2 {
+.card .main-content h1 {
   font-size: 24px;
   color: var(--dark-blue);
   font-weight: 900;
